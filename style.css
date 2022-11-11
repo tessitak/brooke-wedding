@@ -1,0 +1,96 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+/* Begin constants styling */
+
+@font-face {
+    font-family: "Avenir";
+    src: url(https://bawedding.s3.us-west-2.amazonaws.com/avenir-lt.ttf);
+    }
+
+@font-face {
+    font-family: "Bookerly Display";
+    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Display.ttf);
+}
+
+@font-face {
+    font-family: "Bookerly Italic";
+    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Italic.ttf);
+}
+
+.blush-text {
+    color: #fff6fc;
+}
+
+.serif {
+    font-family: "Bookerly Display";
+}
+
+.sans-serif {
+    font-family: "Avenir";
+}
+
+
+/* End constants styling */
+
+/* Begin nav bar styling */
+
+.nav-bar {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	position: fixed;
+	width: 100%;
+}
+
+/* End nav bar styling */
+
+/* Begin cover page styling */
+
+.photo-background {
+	position: absolute;
+	/* top: 50px;  << ADD BACK WITH NAV BAR */
+    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #13273f;
+	background-image: url("https://bawedding.s3.us-west-2.amazonaws.com/Brooke_Andrew_Cover.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom 0;
+}
+
+.photo-overlay {
+	position: absolute;
+	/* top: 50px;  << ADD BACK WITH NAV BAR */
+    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: black;
+	opacity:  0.3;
+	transition:  0.5s ease-in;
+}
+
+.cover-details-container {
+    width: 100%;
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.coming-soon {
+    font-size: 100px;
+}
+
+/* End cover page styling */
