@@ -7,18 +7,21 @@ body, html {
 /* Begin constants styling */
 
 @font-face {
-    font-family: "Avenir";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/avenir-lt.ttf);
-    }
-
-@font-face {
-    font-family: "Bookerly Display";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Display.ttf);
+    font-family: "ivypresto-display", serif;
+	font-weight: 300;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Bookerly Italic";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Italic.ttf);
+    font-family: "ivypresto-display", serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "ivypresto-display", serif;
+	font-weight: 300;
+	font-style: italic;
 }
 
 .blush-text {
@@ -26,17 +29,8 @@ body, html {
 }
 
 .serif {
-    font-family: "Bookerly Display";
-}
-
-.sans-serif {
-    font-family: "Avenir";
-}
-
-p {
-	font-family: "Avenir";
-	color: #fff6fc;
-	font-size: 18px;
+    font-family: "ivypresto-display";
+    letter-spacing: 4px;
 }
 
 
@@ -59,8 +53,7 @@ p {
 
 .photo-background {
 	position: absolute;
-	/* top: 50px;  << ADD BACK WITH NAV BAR */
-    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	top: 50px;
 	bottom: 0;
 	right: 0;
 	left: 0;
