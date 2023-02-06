@@ -12,7 +12,7 @@ body, html {
 	font-style: normal;
 }
 
-@font-face {
+.light {
     font-family: "ivypresto-display", serif;
 	font-weight: 100;
 	font-style: normal;
@@ -33,6 +33,17 @@ body, html {
     letter-spacing: 4px;
 }
 
+.hidden {
+	display: none;
+}
+
+.centered {
+	text-align: center;
+}
+
+a {
+	color: white;
+}
 
 /* End constants styling */
 
@@ -45,9 +56,89 @@ body, html {
 	margin: 0;
 	position: fixed;
 	width: 100%;
+	background-color: #12273f;
+}
+
+.nav-list {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+	padding-left: 0;
+}
+
+.nav-item > a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 1px;
+	letter-spacing: 0.05em;
 }
 
 /* End nav bar styling */
+
+/*Begin side menu styling*/
+.side-menu {
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: linear-gradient(#1a3024, #000);
+	z-index: 5;
+}
+
+.side-list {
+	padding-left: 0;
+	padding-right: 15px;
+	list-style: none;
+	text-align: right;
+	font-size: 32px;
+}
+
+.side-item {
+	padding-bottom: 20px;
+}
+
+.side-item > a {
+	text-decoration: none;
+	color: #f8e6de;
+}
+/*End side menu styling*/
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
+
+/*Begin hamburger menu styling*/
+.hamburger {
+	cursor: pointer;
+	padding-right: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 25px;
+	height: 4px;
+	background-color: #f7f3ef;
+	margin: 4px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 5px);
+	transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-6px, -6px);
+	transform: rotate(45deg) translate(-6px, -6px);
+}
+/*End hamburger menu styling*/
+
 
 /* Begin cover page styling */
 
@@ -66,8 +157,7 @@ body, html {
 
 .photo-overlay {
 	position: absolute;
-	/* top: 50px;  << ADD BACK WITH NAV BAR */
-    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	top: 50px; 
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -113,10 +203,6 @@ body, html {
 	letter-spacing: 0.2em;
 }
 
-a.rsvp-button {
-	color: white;
-}
-
 .rsvp-button:hover {
 	text-decoration: none;
 	cursor: pointer;
@@ -147,3 +233,68 @@ a.rsvp-button {
 }
 
 /* End cover page styling */
+
+
+@media screen and (max-device-width: 850px), (max-width: 850px) {
+	
+	.details-container {
+		width: 100%;
+	}
+
+	.nav-list {
+		display: none;
+	}
+
+	.nav-bar {
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 15px;
+	}
+
+	.hamburger {
+		display: inline-block;
+	}
+
+	.photo-overlay {
+		opacity: 0.5;
+		position: absolute;
+		top: 50px;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: black;
+		transition:  0.5s ease-in;
+	}
+
+	.centered-container {
+		width: 100%;
+	}
+
+	.travel-container {
+		grid-template-columns: 1fr;
+		width: 100%;
+		overflow-x: hidden;
+		justify-content: center;
+	}
+
+	.travel-content {
+		width: 80%;
+	}
+
+	ul.centered-list {
+		width: 100%;
+	}
+
+
+	.faq-text {
+		width: 85%;
+	}
+
+	.gallery-image {
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
