@@ -313,6 +313,7 @@ a:hover {
 	text-align: center;
 	color: #12273f;
 	font-size: 18px;
+	letter-spacing: 0.05em;
 }
 
 .faq-text:last-of-type {
