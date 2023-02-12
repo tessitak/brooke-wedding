@@ -300,6 +300,7 @@ a:hover {
 
 /*Begin travel page styling*/
 .page-list {
+	padding-left: 0;
 	padding-bottom: 10px;
 	font-size: 18px;
 	text-align: center;
@@ -307,6 +308,8 @@ a:hover {
 
 .page-list-ul {
 	list-style: none;
+	padding: 0;
+	width: 80%;
 }
 
 .travel-details {
@@ -470,7 +473,7 @@ a:hover {
 	.grid-container {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 420px;
+		grid-template-columns: 0.8fr;
 	}
 
 	.party-card {
