@@ -402,6 +402,7 @@ a:hover {
 
 .party-card:nth-last-child(1):nth-child(odd) {
 	grid-column: 2 / span 2;
+	margin-bottom: 50px;
 }
 
 .party-card-text > h4.italic-font {
