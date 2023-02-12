@@ -28,9 +28,16 @@ body, html {
 	font-style: italic;
 }
 
+.italic-font {
+	font-style: italic;
+}
+
+h1, h2, h3, h4 {
+	letter-spacing: 0.1em;
+}
+
 h4 {
 	font-size: 18px;
-	letter-spacing: 0.1em;
 	padding-top: 5px;
 	margin-top: -1px;
 	margin-bottom: -5px;
@@ -286,22 +293,29 @@ a:hover {
 /* End cover page styling */
 
 /*Begin details page styling*/
-
-
 .section-text {
 	width: 80%;
 }
-
 /*End details page styling*/
 
 /*Begin travel page styling*/
-
 .page-list {
 	padding-bottom: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.page-list-ul {
+	list-style: none;
 }
 
 .travel-details {
 	width: 80%;
+	font-size: 20px;
+}
+
+.travel-details:last-of-type {
+	padding-bottom: 80px;
 }
 
 /*End travel page styling*/
@@ -353,7 +367,6 @@ a:hover {
 	color: #ff5089;
 }
 
-
 .section-header {
 	font-size: 25px;
 	margin-bottom: 0;
@@ -364,6 +377,53 @@ a:hover {
 
 /*End FAQ styling*/
 
+/*Begin wedding party styling*/
+
+.grid-container {
+	width: 100%;
+	display: grid;
+/*	grid-template-columns: 400px 400px;*/
+	grid-template-columns: repeat(4, 200px);
+	column-gap: 20px;
+	row-gap: 20px;
+	justify-content: center;
+  	align-items: center;
+  	align-items: stretch;
+}
+
+.party-card {
+	background-color: #d2e1f2;
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.party-card:nth-last-child(1):nth-child(odd) {
+	grid-column: 2 / span 2;
+}
+
+.party-card-text > h4.italic-font {
+	padding-bottom: 10px;
+}
+
+.party-card-text {
+	padding: 0 20px 20px 20px;
+	letter-spacing: 0.1em;
+}
+
+.party-card-subheader {
+	padding: 5px ;
+}
+
+.party-photo {
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+}
+
+/*End wedding party styling*/
 
 @media screen and (max-device-width: 850px), (max-width: 850px) {
 	
@@ -398,31 +458,26 @@ a:hover {
 		width: 100%;
 	}
 
-	.travel-container {
-		grid-template-columns: 1fr;
-		width: 100%;
-		overflow-x: hidden;
-		justify-content: center;
-	}
-
-	.travel-content {
-		width: 80%;
-	}
-
 	ul.centered-list {
 		width: 100%;
 	}
 
-
-	.faq-text {
+	.section-text {
 		width: 85%;
 	}
 
-	.gallery-image {
-		max-width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	.grid-container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 420px;
+	}
+
+	.party-card {
+		grid-column: span 1;
+	}
+
+	.party-card:nth-last-child(1):nth-child(odd) {
+		grid-column: 1 / span 1;
 	}
 
 }
