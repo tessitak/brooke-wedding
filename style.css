@@ -2,23 +2,45 @@ body, html {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	font-family: "ivypresto-display", serif;
+	font-weight: 300;
+	font-style: normal;
+	background-color: #e7eff8;;
 }
 
 /* Begin constants styling */
 
 @font-face {
-    font-family: "Avenir";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/avenir-lt.ttf);
-    }
+    font-family: "ivypresto-display", serif;
+	font-weight: 300;
+	font-style: normal;
+}
 
-@font-face {
-    font-family: "Bookerly Display";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Display.ttf);
+.light {
+    font-family: "ivypresto-display", serif;
+	font-weight: 100;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Bookerly Italic";
-    src: url(https://bawedding.s3.us-west-2.amazonaws.com/Bookerly+Italic.ttf);
+    font-family: "ivypresto-display", serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.italic-font {
+	font-style: italic;
+}
+
+h1, h2, h3, h4 {
+	letter-spacing: 0.1em;
+}
+
+h4 {
+	font-size: 18px;
+	padding-top: 5px;
+	margin-top: -1px;
+	margin-bottom: -5px;
 }
 
 .blush-text {
@@ -26,17 +48,40 @@ body, html {
 }
 
 .serif {
-    font-family: "Bookerly Display";
+    font-family: "ivypresto-display";
 }
 
-.sans-serif {
-    font-family: "Avenir";
+.wide-tracking {
+	letter-spacing: 0.1em;
 }
 
-p {
-	font-family: "Avenir";
-	color: #fff6fc;
-	font-size: 18px;
+
+.hidden {
+	display: none;
+}
+
+.centered {
+	text-align: center;
+}
+
+a {
+	color: #12273f;
+}
+
+a:hover {
+	color: #ff5089;
+}
+
+.nav-item > a {
+	color: white;
+}
+
+.centered-container {
+		width: 100%;
+	}
+
+.drk-blue-bkg {
+	background-color: #12273f;
 }
 
 
@@ -53,14 +98,110 @@ p {
 	width: 100%;
 }
 
+.nav-list {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+	padding-left: 0;
+}
+
+.nav-item > a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 1px;
+	letter-spacing: 0.05em;
+}
+
 /* End nav bar styling */
+
+/*Begin side menu styling*/
+.side-menu {
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: linear-gradient(#12273f, #000);
+	z-index: 5;
+}
+
+.side-list {
+	padding-left: 0;
+	padding-right: 15px;
+	list-style: none;
+	text-align: right;
+	font-size: 32px;
+}
+
+.side-item {
+	padding-bottom: 20px;
+}
+
+.side-item > a {
+	text-decoration: none;
+	color: #e6eff8;
+}
+/*End side menu styling*/
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
+
+/*Begin hamburger menu styling*/
+.hamburger {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+  transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+/*End hamburger menu styling*/
+
+/*Begin coming soon styling*/
+.coming-soon {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+	letter-spacing: 0.15em;
+	background-color: #e6eff8;
+}
+/*End coming soon styling*/
+
 
 /* Begin cover page styling */
 
 .photo-background {
 	position: absolute;
-	/* top: 50px;  << ADD BACK WITH NAV BAR */
-    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	top: 50px;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -73,8 +214,7 @@ p {
 
 .photo-overlay {
 	position: absolute;
-	/* top: 50px;  << ADD BACK WITH NAV BAR */
-    top: 0; /* <<DELETE WHEN ADDING NAV BAR */
+	top: 50px; 
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -106,6 +246,7 @@ p {
 .rsvp-button {
 	text-decoration: none;
 	border:  1px solid #f7f3ef;
+	color: white;
 	border-radius: 5px;
 	padding: 10px 40px;
 	margin-top: 30px;
@@ -120,10 +261,6 @@ p {
 	letter-spacing: 0.2em;
 }
 
-a.rsvp-button {
-	color: white;
-}
-
 .rsvp-button:hover {
 	text-decoration: none;
 	cursor: pointer;
@@ -135,7 +272,7 @@ a.rsvp-button {
 	.cover-details-container {
 		position: absolute;
 		width: 100%;
-		top: 0;
+		top: 50px;
 		bottom: 0;
 		right: 0;
 		left: 0;
@@ -154,3 +291,232 @@ a.rsvp-button {
 }
 
 /* End cover page styling */
+
+/*Begin details page styling*/
+.section-text {
+	width: 80%;
+}
+/*End details page styling*/
+
+/*Begin travel page styling*/
+.page-list {
+	padding-left: 0;
+	padding-bottom: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.page-list-ul {
+	list-style: none;
+	padding: 0;
+	width: 80%;
+}
+
+.travel-details {
+	width: 80%;
+	font-size: 20px;
+}
+
+.travel-details:last-of-type {
+	padding-bottom: 80px;
+}
+
+/*End travel page styling*/
+
+.second-sentence {
+	padding-top: 15px;
+}
+/*Begin FAQ styling*/
+
+
+.flex-container-fullsize {
+	width:  100%;
+	height: 100%;
+	top: 50px;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	font-family: font-family: "ivypresto-display", serif;
+	font-weight: 300;
+}
+
+
+.flex-container-fullsize > h1 {
+	padding-top: 100px;
+	text-align: center;
+	font-size: 45px;
+}
+
+.section-text {
+	max-width: 600px;
+	text-align: center;
+	color: #12273f;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+}
+
+.section-text:last-of-type {
+	padding-bottom: 50px;
+}
+
+.section-text > a {
+	color: #12273f;
+}
+
+.section-text > a:hover {
+	color: #ff5089;
+}
+
+.section-header {
+	font-size: 25px;
+	margin-bottom: 0;
+	text-align: center;
+	max-width: 85%;
+	color: #12273f;
+}
+
+/*End FAQ styling*/
+
+/*Begin wedding party styling*/
+
+.grid-container {
+	width: 100%;
+	display: grid;
+/*	grid-template-columns: 400px 400px;*/
+	grid-template-columns: repeat(4, 200px);
+	column-gap: 20px;
+	row-gap: 20px;
+	justify-content: center;
+  	align-items: center;
+  	align-items: stretch;
+}
+
+.party-card {
+	background-color: #d2e1f2;
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.party-card:nth-last-child(1):nth-child(odd) {
+	grid-column: 2 / span 2;
+	margin-bottom: 50px;
+}
+
+.party-card-text > h4.italic-font {
+	padding-bottom: 10px;
+}
+
+.party-card-text {
+	padding: 0 20px 20px 20px;
+	letter-spacing: 0.1em;
+}
+
+.party-card-subheader {
+	padding: 5px ;
+}
+
+.party-photo {
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+}
+
+/*End wedding party styling*/
+
+/*Begin photo gallery styling*/
+.gallery {
+	width: 80%;
+	line-height:0;
+	column-count:2;
+	column-gap:10px;
+	padding: 10px;
+}
+
+.gallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:10px; 
+}
+
+/*@media (max-width: 1200px) {
+   .gallery {
+    	column-count: 4;
+   }
+}
+*/
+/*@media (max-width: 1000px) {
+   .gallery {
+    	column-count: 3;
+   }
+}*/
+
+@media (max-width: 800px) {
+   .gallery {
+    	column-count: 1;
+   }
+}
+
+/*End photo gallery styling*/
+
+@media screen and (max-device-width: 850px), (max-width: 850px) {
+	
+	.details-container {
+		width: 100%;
+	}
+
+	.event-details-container {
+		width: 100%;
+	}
+
+	.details-details {
+		font-size: 18px;
+		width: 80%;
+	}
+
+	.nav-list {
+		display: none;
+	}
+
+	.nav-bar {
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 15px;
+	}
+
+	.hamburger {
+		display: inline-block;
+	}
+
+	.centered-container {
+		width: 100%;
+	}
+
+	ul.centered-list {
+		width: 100%;
+	}
+
+	.section-text {
+		width: 85%;
+	}
+
+	.grid-container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 0.8fr;
+	}
+
+	.party-card {
+		grid-column: span 1;
+	}
+
+	.party-card:nth-last-child(1):nth-child(odd) {
+		grid-column: 1 / span 1;
+	}
+
+}
