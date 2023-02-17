@@ -21,7 +21,7 @@ function insertNav() {
 	<aside class="side-menu hidden" id="side-menu">
 		<ul class="side-list italic-font">
 			<li class="side-item"><a href="index.html">Home</a></li>
-			<li class="nav-item"><a href="https://withjoy.com/Andrewlovesbrooke/rsvp">RSVP</a></li>
+			<li class="side-item"><a href="https://withjoy.com/Andrewlovesbrooke/rsvp">RSVP</a></li>
 			<li class="side-item"><a href="details.html">Details</a></li>
 			<li class="side-item"><a href="travel.html">Travel</a></li>
 			<li class="side-item"><a href="faq.html">FAQ</a></li>
