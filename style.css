@@ -6,6 +6,7 @@ body, html {
 	font-weight: 300;
 	font-style: normal;
 	background-color: #e7eff8;;
+	overflow-y: overlay;
 }
 
 /* Begin constants styling */
@@ -338,7 +339,6 @@ a:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	overflow-y: auto;
 	font-family: font-family: "ivypresto-display", serif;
 	font-weight: 300;
 }
